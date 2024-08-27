@@ -8,7 +8,7 @@ import "../Styles/headerStyle.css";
 export const StaffLayout = () => {
   return (
     <>
-      <header className="header">
+      <header className="head__header">
         <div className="header__logo">
           <img src="FrentByte.png" alt="logo" className="logo__img" />
         </div>

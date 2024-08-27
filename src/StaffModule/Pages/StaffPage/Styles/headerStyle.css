@@ -1,9 +1,10 @@
-.header {
+.head__header {
   height: 12rem;
   overflow: hidden;
   padding: 1rem 6rem;
   display: flex;
   align-items: center;
+  grid-area: 1 / 1 / 2 / 6;
 }
 
 .header__logo {
