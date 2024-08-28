@@ -1,10 +1,9 @@
 aside {
   background-color: var(--bg-primary);
   position: relative;
-  min-height: 80vh;
-  height: 100%;
+  width: 20%;
+  height: calc(100vh - 14rem);
   border-radius: 0 1rem 1rem 0;
-  grid-area: 2 / 1 / 6 / 2;
 }
 
 .aside__header {

@@ -12,6 +12,7 @@
   --bg-primary: #0c76c2;
   --bg-secondary: #fdfdfd;
   --bg-primary-ligth: #3f96e7;
+  --bg-primary-ligth-rgba: rgba(63, 150, 231, 0.4);
   --bg-icons: #ffffff;
   --text-primary: #121212;
   --text-secondary: #ffffff;
@@ -23,14 +24,6 @@
   --bg-button-ligth: #26c953;
   --bg-button: #168649;
   --color-undraw: #051464;
-}
-
-#root {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 }
 
 html {
