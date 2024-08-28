@@ -8,9 +8,8 @@ import {
   faRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/asideStyle.css";
-import { ReactElement } from "react";
 
-const focusOption = (e: React.MouseEvent<HTMLLIElement>) => {
+const focusOption = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
   const elementoPadre = e.currentTarget.parentElement;
 
   elementoPadre?.childNodes.forEach((li) => (li.className = "nav__option"));
@@ -46,13 +45,13 @@ export const AsideLayout = () => {
                 icon={faFileSignature}
                 className="option__icon"
               />
-              <span className="option__text">Nombre</span>
+              <span className="option__text">Cumpleaños</span>
             </div>
           </li>
           <li className="nav__option" onClick={focusOption}>
             <div className="option__container">
               <FontAwesomeIcon icon={faRankingStar} className="option__icon" />
-              <span className="option__text">Puesto</span>
+              <span className="option__text">Desvinculados</span>
             </div>
           </li>
         </nav>
