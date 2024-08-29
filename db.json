@@ -1,26 +1,100 @@
-[
-  {
-    "id": 1,
-    "firstName": "Carlos",
-    "lastName": "Portillo",
-    "department": "Compras",
-    "email": "cportillo@llmc.hn",
-    "img": "user1.jpg"
-  },
-  {
-    "id": 2,
-    "firstName": "Luis",
-    "lastName": "Argueta",
-    "department": "Mantenimiento",
-    "email": "luisargueta@llmc.hn",
-    "img": "user3.jpg"
-  },
-  {
-    "id": 3,
-    "firstName": "Tatiana",
-    "lastName": "Figueroa",
-    "department": "Admiciones",
-    "email": "tfigueroa@llmc.hn",
-    "img": "user2.jpg"
-  }
-]
+{
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Carlos",
+      "lastName": "Portillo",
+      "department": "Compras",
+      "email": "cportillo@llmc.hn",
+      "img": "user1.jpg"
+    },
+    {
+      "id": 2,
+      "firstName": "Luis",
+      "lastName": "Argueta",
+      "department": "Mantenimiento",
+      "email": "luisargueta@llmc.hn",
+      "img": "user3.jpg"
+    },
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    },
+
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    },
+
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    },
+
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    },
+
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    },
+
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    },
+
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    },
+
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    },
+
+    {
+      "id": 3,
+      "firstName": "Tatiana",
+      "lastName": "Figueroa",
+      "department": "Admisiones",
+      "email": "tfigueroa@llmc.hn",
+      "img": "user2.jpg"
+    }
+  ]
+}
