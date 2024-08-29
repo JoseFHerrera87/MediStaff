@@ -26,7 +26,7 @@
     },
 
     {
-      "id": 3,
+      "id": 4,
       "firstName": "Tatiana",
       "lastName": "Figueroa",
       "department": "Admisiones",
@@ -35,7 +35,7 @@
     },
 
     {
-      "id": 3,
+      "id": 5,
       "firstName": "Tatiana",
       "lastName": "Figueroa",
       "department": "Admisiones",
@@ -44,7 +44,7 @@
     },
 
     {
-      "id": 3,
+      "id": 6,
       "firstName": "Tatiana",
       "lastName": "Figueroa",
       "department": "Admisiones",
@@ -53,7 +53,7 @@
     },
 
     {
-      "id": 3,
+      "id": 7,
       "firstName": "Tatiana",
       "lastName": "Figueroa",
       "department": "Admisiones",
@@ -62,7 +62,7 @@
     },
 
     {
-      "id": 3,
+      "id": 8,
       "firstName": "Tatiana",
       "lastName": "Figueroa",
       "department": "Admisiones",
@@ -71,7 +71,7 @@
     },
 
     {
-      "id": 3,
+      "id": 9,
       "firstName": "Tatiana",
       "lastName": "Figueroa",
       "department": "Admisiones",
@@ -80,7 +80,7 @@
     },
 
     {
-      "id": 3,
+      "id": 10,
       "firstName": "Tatiana",
       "lastName": "Figueroa",
       "department": "Admisiones",
@@ -89,12 +89,27 @@
     },
 
     {
-      "id": 3,
+      "id": 11,
       "firstName": "Tatiana",
       "lastName": "Figueroa",
       "department": "Admisiones",
       "email": "tfigueroa@llmc.hn",
       "img": "user2.jpg"
+    }
+  ],
+
+  "departments": [
+    {
+      "id": 1,
+      "name": "Compras"
+    },
+    {
+      "id": 2,
+      "name": "Mantenimiento"
+    },
+    {
+      "id": 3,
+      "name": "Admisiones"
     }
   ]
 }

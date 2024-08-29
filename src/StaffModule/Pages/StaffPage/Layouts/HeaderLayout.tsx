@@ -5,7 +5,7 @@ import { Searchbar } from "../Components/Searchbar";
 
 import "../Styles/headerStyle.css";
 
-export const StaffLayout = () => {
+export const HeaderLayout = () => {
   return (
     <>
       <header className="head__header">

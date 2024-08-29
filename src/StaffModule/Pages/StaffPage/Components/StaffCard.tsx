@@ -1,4 +1,4 @@
-import { EmployeeTest } from "../interface/employee";
+import { EmployeeTest } from "../../../../interface/employee";
 export const StaffCard = ({
   firstName,
   lastName,

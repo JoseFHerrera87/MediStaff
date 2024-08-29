@@ -9,15 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/asideStyle.css";
 
-const focusOption = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-  const elementoPadre = e.currentTarget.parentElement;
-
-  elementoPadre?.childNodes.forEach((li) => (li.className = "nav__option"));
-
-  e.currentTarget.classList.add("nav__option--active");
-};
-
-export const AsideLayout = () => {
+export const AsideLayout = ({ focusOption }) => {
   return (
     <>
       <aside>
@@ -27,19 +19,22 @@ export const AsideLayout = () => {
         </header>
 
         <nav className="aside__nav">
-          <li className="nav__option nav__option--active" onClick={focusOption}>
+          <li
+            className="nav__option nav__option--active"
+            onClick={(e) => focusOption(e)}
+          >
             <div className="option__container">
               <FontAwesomeIcon icon={faFilter} className="option__icon" />
               <span className="option__text">Todos</span>
             </div>
           </li>
-          <li className="nav__option" onClick={focusOption}>
+          <li className="nav__option" onClick={(e) => focusOption(e)}>
             <div className="option__container">
               <FontAwesomeIcon icon={faBuildingUser} className="option__icon" />
               <span className="option__text">Departamento</span>
             </div>
           </li>
-          <li className="nav__option" onClick={focusOption}>
+          <li className="nav__option" onClick={(e) => focusOption(e)}>
             <div className="option__container">
               <FontAwesomeIcon
                 icon={faFileSignature}
@@ -48,7 +43,7 @@ export const AsideLayout = () => {
               <span className="option__text">Cumpleaños</span>
             </div>
           </li>
-          <li className="nav__option" onClick={focusOption}>
+          <li className="nav__option" onClick={(e) => focusOption(e)}>
             <div className="option__container">
               <FontAwesomeIcon icon={faRankingStar} className="option__icon" />
               <span className="option__text">Desvinculados</span>

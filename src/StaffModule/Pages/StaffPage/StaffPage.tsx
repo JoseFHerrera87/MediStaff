@@ -1,22 +1,16 @@
-import { StaffLayout } from "./Layouts/HeaderLayout";
-import { AsideLayout } from "./Layouts/AsideLayout";
-import { MainLayout } from "./Layouts/MainLayout";
-import { StaffCard } from "./Components/StaffCard";
+import { useAsideNavigation } from "../../../hooks/useAsideNavigation.tsx";
+import { HeaderLayout, AsideLayout, MainLayout } from "./Layouts/index.ts";
 import "./Styles/staffPage.css";
-import { useFetch } from "./hooks/useFetch";
 
 export const StaffPage = () => {
-  const employees = useFetch("http://localhost:3000/employees");
+  const { View, focusOption } = useAsideNavigation();
 
-  console.log(employees);
   return (
     <>
-      <StaffLayout />
+      <HeaderLayout />
       <div className="principal">
-        <AsideLayout />
-        <MainLayout>
-          <div>Vacio</div>
-        </MainLayout>
+        <AsideLayout focusOption={focusOption} />
+        <MainLayout>{View}</MainLayout>
       </div>
     </>
   );
