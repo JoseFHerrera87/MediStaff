@@ -1,95 +1,41 @@
+import { Fragment, useEffect, useState } from "react";
 import { useFetch } from "../../../../hooks/useFetch";
 import { StaffCard } from "../Components/StaffCard";
-import { Fragment } from "react/jsx-runtime";
-
+import { groupBy } from "../../../Helpers/groupBy";
 export const DepartmentViews = () => {
-  const departments = ["Compras", "Admiciones", "Mantenimiento", "Caja", "IT"];
   const { AllEmployees } = useFetch("http://localhost:3000/employees");
 
-  // const filterByDepartment = AllEmployees.map((employee) => {
-  //   return employee;
-  // });
+  const people = [
+    { name: "Alice", age: 30, city: "New York" },
+    { name: "Bob", age: 25, city: "San Francisco" },
+    { name: "Charlie", age: 30, city: "New York" },
+    { name: "David", age: 25, city: "Los Angeles" },
+    { name: "Eve", age: 35, city: "New York" },
+  ];
 
-  // console.log(filterByDepartment);
+  groupBy(people, "age");
 
-  const estructura = {
-    Compras: [
-      {
-        id: 1,
-        firstName: "Carlos",
-        lastName: "Portillo",
-        department: "Compras",
-        email: "cportillo@llmc.hn",
-        img: "user2.jpg",
-      },
-      {
-        id: 4,
-        firstName: "Carlos",
-        lastName: "Portillo",
-        department: "Compras",
-        email: "cportillo@llmc.hn",
-        img: "user2.jpg",
-      },
-      {
-        id: 6,
-        firstName: "Carlos",
-        lastName: "Portillo",
-        department: "Compras",
-        email: "cportillo@llmc.hn",
-        img: "user2.jpg",
-      },
-    ],
-    Admisiones: [
-      {
-        id: 8,
-        firstName: "Carlos",
-        lastName: "Portillo",
-        department: "Compras",
-        email: "cportillo@llmc.hn",
-        img: "user2.jpg",
-      },
-      {
-        id: 9,
-        firstName: "Carlos",
-        lastName: "Portillo",
-        department: "Compras",
-        email: "cportillo@llmc.hn",
-        img: "user2.jpg",
-      },
-      {
-        id: 11,
-        firstName: "Carlos",
-        lastName: "Portillo",
-        department: "Compras",
-        email: "cportillo@llmc.hn",
-        img: "user2.jpg",
-      },
-    ],
-  };
-
-  console.log(estructura);
-
-  return (
-    <>
-      {departments.map((department) => (
-        <Fragment key={department}>
-          <header className="main__header">
-            <h1 className="header__title">{department}</h1>
-          </header>
-
-          {AllEmployees.map((employee) => (
-            <StaffCard
-              firstName={employee.firstName}
-              department={employee.department}
-              id={employee.id}
-              img={employee.img}
-              email={employee.email}
-              lastName={employee.lastName}
-              key={employee.id}
-            />
-          ))}
-        </Fragment>
-      ))}
-    </>
-  );
+  return <></>;
 };
+
+// <>
+//   {departments.map((department) => (
+//     <Fragment key={department}>
+//       <header className="main__header">
+//         <h1 className="header__title">{department}</h1>
+//       </header>
+
+//       {AllEmployees.map((employee) => (
+//         <StaffCard
+//           firstName={employee.firstName}
+//           department={employee.department}
+//           id={employee.id}
+//           img={employee.img}
+//           email={employee.email}
+//           lastName={employee.lastName}
+//           key={employee.id}
+//         />
+//       ))}
+//     </Fragment>
+//   ))}
+// </>
