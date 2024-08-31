@@ -1,19 +1,29 @@
-export const groupBy = (array: object[], orderBy: string) => {
-  const grouped: object = {};
-  array.map((element) => {
-    if (!Object.keys(element).includes(orderBy)) {
+type GroupedByKey<T> = {
+  [key: string]: T[];
+};
+
+export const groupBy = <T extends Record<string, any>>(
+  array: T[],
+  orderBy: keyof T
+): object => {
+  const grouped: GroupedByKey<T> = {};
+
+  array.forEach((element) => {
+    if (!(orderBy in element)) {
       console.error("Propiedad no contenida en groupBy");
       return;
     }
 
-    const objProps: string | number | object = element[orderBy];
+    const objkey = element[orderBy] as unknown as string;
 
-    if (!grouped[objProps] || !grouped[objProps] === element) {
-      grouped[objProps] = [element];
+    if (!grouped[objkey]) {
+      grouped[objkey] = [];
     }
+
+    grouped[objkey].push(element);
   });
 
-  console.log(grouped);
+  return grouped;
 };
 
 // {

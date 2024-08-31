@@ -1,41 +1,39 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import { useFetch } from "../../../../hooks/useFetch";
 import { StaffCard } from "../Components/StaffCard";
-import { groupBy } from "../../../Helpers/groupBy";
+import { groupBy } from "../../../Helpers/groupBy.ts";
+import { EmployeeTest } from "../../../../interface/employee.ts";
+
 export const DepartmentViews = () => {
   const { AllEmployees } = useFetch("http://localhost:3000/employees");
 
-  const people = [
-    { name: "Alice", age: 30, city: "New York" },
-    { name: "Bob", age: 25, city: "San Francisco" },
-    { name: "Charlie", age: 30, city: "New York" },
-    { name: "David", age: 25, city: "Los Angeles" },
-    { name: "Eve", age: 35, city: "New York" },
-  ];
+  if (AllEmployees.length < 1) {
+    <div>No hay Empleados que mostrar</div>;
+    return;
+  }
+  const byDepartment = groupBy(AllEmployees, "department");
 
-  groupBy(people, "age");
+  return (
+    <>
+      {Object.keys(byDepartment).map((department) => (
+        <Fragment key={department}>
+          <header className="main__header">
+            <h1 className="header__title">{department}</h1>
+          </header>
 
-  return <></>;
+          {byDepartment[department].map((employee: EmployeeTest) => (
+            <StaffCard
+              firstName={employee.firstName}
+              department={employee.department}
+              id={employee.id}
+              img={employee.img}
+              email={employee.email}
+              lastName={employee.lastName}
+              key={employee.id}
+            />
+          ))}
+        </Fragment>
+      ))}
+    </>
+  );
 };
-
-// <>
-//   {departments.map((department) => (
-//     <Fragment key={department}>
-//       <header className="main__header">
-//         <h1 className="header__title">{department}</h1>
-//       </header>
-
-//       {AllEmployees.map((employee) => (
-//         <StaffCard
-//           firstName={employee.firstName}
-//           department={employee.department}
-//           id={employee.id}
-//           img={employee.img}
-//           email={employee.email}
-//           lastName={employee.lastName}
-//           key={employee.id}
-//         />
-//       ))}
-//     </Fragment>
-//   ))}
-// </>

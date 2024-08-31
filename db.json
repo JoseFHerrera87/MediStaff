@@ -63,11 +63,11 @@
 
     {
       "id": 8,
-      "firstName": "Tatiana",
-      "lastName": "Figueroa",
-      "department": "Admisiones",
+      "firstName": "Alex",
+      "lastName": "Pierro",
+      "department": "Tecnologia",
       "email": "tfigueroa@llmc.hn",
-      "img": "user2.jpg"
+      "img": "user1.jpg"
     },
 
     {
@@ -90,8 +90,8 @@
 
     {
       "id": 11,
-      "firstName": "Tatiana",
-      "lastName": "Figueroa",
+      "firstName": "Gregori",
+      "lastName": "Alvarado",
       "department": "Caja",
       "email": "tfigueroa@llmc.hn",
       "img": "user1.jpg"
